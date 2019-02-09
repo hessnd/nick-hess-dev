@@ -10,6 +10,7 @@
 html,
 body {
   height: 100%;
+  background: white;
 }
 
 body {
@@ -61,11 +62,6 @@ ul {
     display: block;
   }
 
-  a:hover {
-    color: #ea4235;
-    font-variation-settings: 'opsz' 100;
-  }
-
   a,
   .location {
     color: black;
@@ -73,12 +69,32 @@ ul {
     font-size: 3.5vw;
     font-weight: 100;
     font-variation-settings: 'opsz' 30;
-    transition: color 0.5s ease;
   }
 
   & > .socials {
     display: flex;
     align-items: center;
+
+    a {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px;
+        display: block;
+        right: 0;
+        background: black;
+        transition: width 0.2s ease;
+      }
+
+      &:hover:after {
+        width: 100%;
+        left: 0;
+        background: black;
+      }
+    }
   }
 
   .bull {
