@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'Marvin Visions Small Variable';
+  font-display: swap;
   src: url('./fonts/MarvinVisionsSmall-Variable.woff2') format('woff2'),
     url('./fonts/MarvinVisionsSmall-Variable.woff') format('woff'),
     url('./fonts/MarvinVisionsSmall-Variable.ttf') format('truetype');
@@ -12,37 +13,87 @@ body {
 }
 
 body {
-  margin: 0 2rem;
+  font-family: 'Marvin Visions Small Variable';
+  margin: 0 3rem;
   display: flex;
   flex-direction: column;
 }
 
 h1 {
-  font-family: 'Marvin Visions Small Variable';
   font-size: 8vw;
   font-weight: 140;
   font-variation-settings: 'opsz' 100;
 }
 
 h2 {
-  font-family: 'Marvin Visions Small Variable';
-  text-transform: uppercase;
   font-size: 5vw;
   font-weight: 140;
   font-variation-settings: 'opsz' 80;
 }
 
+h3 {
+  font-size: 4vw;
+  font-weight: 120;
+  font-variation-settings: 'opsz' 80;
+}
+
 p,
 ul {
-  font-family: 'Marvin Visions Small Variable';
   font-size: 3.5vw;
-  font-weight: 90;
+  font-weight: 80;
   font-variation-settings: 'opsz' 30;
-  transition: font-variation-settings 0.2s ease-in;
+}
+
+.nested-ul {
+  font-size: 3vw;
 }
 
 .main {
   flex: 1 0 auto;
+}
+
+.contact {
+  & > h1 {
+    border-bottom: solid black 4px;
+  }
+
+  .location {
+    display: block;
+  }
+
+  a:hover {
+    color: #ea4235;
+    font-variation-settings: 'opsz' 100;
+  }
+
+  a,
+  .location {
+    color: black;
+    text-decoration: none;
+    font-size: 3.5vw;
+    font-weight: 100;
+    font-variation-settings: 'opsz' 30;
+    transition: color 0.5s ease;
+  }
+
+  & > .socials {
+    display: flex;
+    align-items: center;
+  }
+
+  .bull {
+    padding: 0 0.5rem;
+  }
+}
+
+.education {
+  > h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  > ul {
+    margin-top: 0;
+  }
 }
 
 .footer {
@@ -50,7 +101,6 @@ ul {
   width: 100%;
   text-align: center;
   padding: 2rem 0;
-  font-family: 'Marvin Visions Small Variable';
   font-size: 2.5vw;
   font-weight: 140;
   font-variation-settings: 'opsz' 80;
