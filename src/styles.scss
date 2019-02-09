@@ -14,12 +14,13 @@ body {
 
 body {
   font-family: 'Marvin Visions Small Variable';
-  padding: 0 3rem;
+  padding: 0 2rem;
   margin: 0;
   display: flex;
   flex-direction: column;
   background: white;
   color: black;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,8 +65,8 @@ ul {
 
 .dark-mode {
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  top: 1rem;
 
   .switch {
     position: relative;
@@ -100,7 +101,7 @@ ul {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #ccc;
+      background-color: #666666;
       transition: 0.4s;
       border-radius: 34px;
 
@@ -121,8 +122,11 @@ ul {
 }
 
 .contact {
-  & > h1 {
+  margin-top: 2rem;
+
+  > .title {
     border-bottom: solid black 4px;
+    transition: border-bottom 0.2s ease;
   }
 
   .location {
