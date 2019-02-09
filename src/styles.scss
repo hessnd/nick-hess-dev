@@ -20,7 +20,13 @@ body {
   flex-direction: column;
   background: white;
   color: black;
-  border-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+    color: white;
+  }
 }
 
 h1 {

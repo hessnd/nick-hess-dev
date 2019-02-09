@@ -25,6 +25,7 @@ window.onload = () => {
   // get toggle button
   const toggle = document.getElementById('dark-mode-toggle');
   const myName = document.getElementById('my-name');
+  const nativeColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
   const setColor = ({ background, text }) => {
     document.body.style.backgroundColor = background;
@@ -40,9 +41,18 @@ window.onload = () => {
     }
   };
 
+  const setDark = e => {
+    state.isDark = e.matches;
+    toggleColor();
+  };
+
+  nativeColorScheme.addListener(setDark);
+
   // initialize button to initial state
+  setDark(nativeColorScheme);
   toggle.checked = state.isDark;
   toggleColor();
+  // initialized
 
   toggle.addEventListener('change', () => {
     state.isDark = !state.isDark;
