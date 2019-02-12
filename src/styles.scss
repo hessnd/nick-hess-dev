@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Marvin Visions Small Variable';
-  font-display: swap;
+  font-display: auto;
   src: url('./fonts/MarvinVisionsSmall-Variable.woff2') format('woff2'),
     url('./fonts/MarvinVisionsSmall-Variable.woff') format('woff'),
     url('./fonts/MarvinVisionsSmall-Variable.ttf') format('truetype');
@@ -8,6 +8,7 @@
 }
 
 $slate: #393f42;
+$whitesmoke: #f5f5f5;
 
 html,
 body {
@@ -20,7 +21,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: white;
+  background-color: white;
   color: $slate;
   transition: background 0.2s ease, color 0.2s ease;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +31,7 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background: $slate;
-    color: white;
+    color: $whitesmoke;
   }
 }
 
@@ -76,8 +77,8 @@ ul {
   .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 48px;
+    height: 28px;
 
     input {
       opacity: 0;
@@ -93,9 +94,9 @@ ul {
       }
 
       &:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
       }
     }
 
@@ -108,13 +109,13 @@ ul {
       bottom: 0;
       background-color: #666666;
       transition: 0.4s;
-      border-radius: 34px;
+      border-radius: 28px;
 
       &:before {
         position: absolute;
         content: '';
-        height: 26px;
-        width: 26px;
+        height: 20px;
+        width: 20px;
         left: 4px;
         bottom: 4px;
         border-radius: 50%;

@@ -17,12 +17,12 @@ const state = {
   darkMode: {
     background: slate,
     headers: whitesmoke,
-    body: whitesmoke
+    body: 'white',
   },
   lightMode: {
     background: 'white',
     headers: slate,
-    body: 'black'
+    body: 'black',
   },
 };
 
@@ -38,7 +38,7 @@ window.onload = () => {
     document.body.style.backgroundColor = background;
 
     // get all elements with class .body and apply styles
-    const bodyElements = document.querySelectorAll('.body')
+    const bodyElements = document.querySelectorAll('.body');
     bodyElements.forEach(elem => {
       elem.style.color = body;
     });
@@ -47,7 +47,7 @@ window.onload = () => {
     const headerElements = document.querySelectorAll('.header');
     headerElements.forEach(elem => {
       elem.style.color = headers;
-      if(elem.className.includes('border-bottom')) {
+      if (elem.className.includes('border-bottom')) {
         elem.style.borderBottom = `solid ${headers} 4px`;
       }
     });
@@ -60,7 +60,7 @@ window.onload = () => {
       setColor(state.lightMode);
     }
   };
-  
+
   // set dark mode for safari native color scheme
   const setDark = e => {
     state.isDark = e.matches;
