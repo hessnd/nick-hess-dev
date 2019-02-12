@@ -17,7 +17,7 @@ body {
 
 body {
   font-family: 'Marvin Visions Small Variable';
-  padding: 0 2rem;
+  padding: 0 20px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@ h1 {
   font-size: 12vw;
   font-weight: 160;
   font-variation-settings: 'opsz' 100;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -71,8 +71,8 @@ ul {
 
 .dark-mode {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 10px;
+  top: 10px;
 
   .switch {
     position: relative;
@@ -128,7 +128,7 @@ ul {
 }
 
 .contact {
-  margin-top: 2rem;
+  margin-top: 20px;
 
   > h1 {
     border-bottom: solid $slate 4px;
@@ -175,13 +175,13 @@ ul {
   }
 
   .bull {
-    padding: 0 0.5rem;
+    padding: 0 5px;
   }
 }
 
 .education {
   > h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
   }
 
   > ul {
@@ -193,7 +193,7 @@ ul {
   flex-shrink: 0;
   width: 100%;
   text-align: center;
-  padding: 2rem 0;
+  padding: 20px 0;
   font-size: 2.5vw;
   font-weight: 140;
   font-variation-settings: 'opsz' 80;
