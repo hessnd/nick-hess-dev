@@ -7,6 +7,8 @@
   font-weight: 20 170;
 }
 
+$slate: #393f42;
+
 html,
 body {
   height: 100%;
@@ -19,13 +21,15 @@ body {
   display: flex;
   flex-direction: column;
   background: white;
-  color: black;
+  color: $slate;
   transition: background 0.2s ease, color 0.2s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: black;
+    background: $slate;
     color: white;
   }
 }
@@ -43,7 +47,7 @@ h2 {
   font-variation-settings: 'opsz' 100;
   display: inline-block;
   margin-bottom: 0;
-  border-bottom: solid black 2px;
+  border-bottom: solid $slate 2px;
 }
 
 h3 {
@@ -57,6 +61,7 @@ ul {
   font-size: 4vw;
   font-weight: 60;
   font-variation-settings: 'opsz' 30;
+  color: black;
 }
 
 .main {
@@ -124,8 +129,8 @@ ul {
 .contact {
   margin-top: 2rem;
 
-  > .title {
-    border-bottom: solid black 4px;
+  > h1 {
+    border-bottom: solid $slate 4px;
     transition: border-bottom 0.2s ease;
   }
 

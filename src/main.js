@@ -7,30 +7,50 @@ const setCopyright = () => {
   copy.innerHTML = `Copyright &copy; ${year} Nick Hess`;
 };
 
+// typography colors
+const slate = '#393f42';
+const whitesmoke = '#f5f5f5';
+
+// color scheme state
+const state = {
+  isDark: false,
+  darkMode: {
+    background: slate,
+    headers: whitesmoke,
+    body: whitesmoke
+  },
+  lightMode: {
+    background: 'white',
+    headers: slate,
+    body: 'black'
+  },
+};
+
 window.onload = () => {
   setCopyright();
 
-  const state = {
-    isDark: false,
-    darkMode: {
-      background: 'black',
-      text: 'white',
-    },
-    lightMode: {
-      background: 'white',
-      text: 'black',
-    },
-  };
-
   // get toggle button
   const toggle = document.getElementById('dark-mode-toggle');
-  const myName = document.getElementById('my-name');
   const nativeColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-  const setColor = ({ background, text }) => {
+  const setColor = ({ background, headers, body }) => {
+    // set background color
     document.body.style.backgroundColor = background;
-    document.body.style.color = text;
-    myName.style.borderBottom = `solid ${text} 4px`;
+
+    // get all elements with class .body and apply styles
+    const bodyElements = document.querySelectorAll('.body')
+    bodyElements.forEach(elem => {
+      elem.style.color = body;
+    });
+
+    // get all elements with class .header and apply styles
+    const headerElements = document.querySelectorAll('.header');
+    headerElements.forEach(elem => {
+      elem.style.color = headers;
+      if(elem.className.includes('border-bottom')) {
+        elem.style.borderBottom = `solid ${headers} 4px`;
+      }
+    });
   };
 
   const toggleColor = () => {
@@ -40,7 +60,8 @@ window.onload = () => {
       setColor(state.lightMode);
     }
   };
-
+  
+  // set dark mode for safari native color scheme
   const setDark = e => {
     state.isDark = e.matches;
     toggleColor();
@@ -48,12 +69,12 @@ window.onload = () => {
 
   nativeColorScheme.addListener(setDark);
 
-  // initialize button to initial state
+  // initialize color scheme to initial state
   setDark(nativeColorScheme);
   toggle.checked = state.isDark;
   toggleColor();
-  // initialized
 
+  // add event listener
   toggle.addEventListener('change', () => {
     state.isDark = !state.isDark;
     toggleColor();
