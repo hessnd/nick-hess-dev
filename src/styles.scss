@@ -148,27 +148,6 @@ ul {
   & > .socials {
     display: flex;
     align-items: center;
-
-    a {
-      position: relative;
-
-      &:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 3px;
-        display: block;
-        right: 0;
-        background: black;
-        transition: width 0.2s ease;
-      }
-
-      &:hover:after {
-        width: 100%;
-        left: 0;
-        background: black;
-      }
-    }
   }
 
   .bull {
