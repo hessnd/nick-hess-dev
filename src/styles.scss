@@ -143,6 +143,7 @@ ul {
     font-size: 4vw;
     font-weight: 100;
     font-variation-settings: 'opsz' 30;
+    transition: font-weight 0.2s ease-in;
   }
 
   & > .socials {
