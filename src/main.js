@@ -1,5 +1,6 @@
 'use-strict';
 import initDarkModeHelper from './js/darkMode';
+import 'animate.css';
 import './styles.scss';
 
 const setCopyright = () => {

@@ -21,6 +21,7 @@ body {
   box-sizing: border-box;
   padding-top: 10px;
   margin: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -66,6 +67,25 @@ ul {
   font-weight: 60;
   font-variation-settings: 'opsz' 30;
   color: black;
+}
+
+.navigation {
+  position: fixed;
+  height: 48px;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+
+  > .initials {
+    padding-left: 10px;
+    display: block;
+    font-weight: 160;
+    font-variation-settings: 'opsz' 100;
+    font-size: 8vw;
+  }
 }
 
 .main {
