@@ -1,6 +1,6 @@
 {
   "version": 2,
-    "alias": ["hesstopher"],
+    "alias": ["hesstopher", "nickhess.me"],
     "builds": [
       { "src": "package.json", "use": "@now/static-build" }
     ]
