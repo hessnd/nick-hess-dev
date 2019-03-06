@@ -14,7 +14,7 @@ setCopyright();
 initDarkModeHelper();
 
 // get all links
-const links = document.querySelectorAll('.social-link');
+const links = document.querySelectorAll('a');
 
 // add listener to all links
 links.forEach(link => {
