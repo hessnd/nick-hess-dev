@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Marvin Visions Small Variable';
-  font-display: auto;
+  font-display: block;
   src: url('./fonts/MarvinVisionsSmall-Variable.woff2') format('woff2'),
     url('./fonts/MarvinVisionsSmall-Variable.woff') format('woff'),
     url('./fonts/MarvinVisionsSmall-Variable.ttf') format('truetype');
@@ -188,14 +188,4 @@ a {
   > ul {
     margin-top: 0;
   }
-}
-
-.footer {
-  flex-shrink: 0;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 2.5vw;
-  font-weight: 140;
-  font-variation-settings: 'opsz' 80;
 }

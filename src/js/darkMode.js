@@ -33,6 +33,10 @@ const setColor = ({ background, headers, body }) => {
     elem.style.color = body;
   });
 
+  const positions = document.querySelectorAll('.positions');
+  positions.forEach(elem => {
+    elem.style.color = body;
+  });
   // get all elements with class .header and apply styles
   const headerElements = document.querySelectorAll('.header');
   headerElements.forEach(elem => {
