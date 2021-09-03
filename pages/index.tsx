@@ -1,12 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
+import Contact from '../components/Contact';
+import Slider from '../components/Slider';
+import Profile from '../components/Profile';
+import Experience from '../components/Experience';
+import Education from '../components/Education';
 
 const IndexPage: React.FC = () => (
-  <div>
+  <>
     <Head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <title>Nick Hess</title>
+      <meta name="description" content="Nick Hess Resume" />
       {/* <-- Global site tag (gtag.js) - Google Analytics --> */}
       {/* <script
       async
@@ -21,6 +27,18 @@ const IndexPage: React.FC = () => (
 
       gtag('config', 'UA-137790663-1');
     </script> */}
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon-32x32.png"
+        sizes="32x32"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon-16x16.png"
+        sizes="16x16"
+      />
       {/* Facebook */}
       <meta property="og:url" content="https://nickhess.dev" />
       <meta property="og:type" content="website" />
@@ -38,9 +56,15 @@ const IndexPage: React.FC = () => (
       <meta name="twitter:image" content="" />
     </Head>
     <body>
-      <h1>Hello from Nick</h1>
+      <main className="main">
+        <Slider />
+        <Contact />
+        <Profile />
+        <Experience />
+        <Education />
+      </main>
     </body>
-  </div>
+  </>
 );
 
 export default IndexPage;
