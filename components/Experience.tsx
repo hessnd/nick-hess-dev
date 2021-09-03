@@ -27,15 +27,13 @@ const jobs = [
   },
 ];
 
-const Experience: React.FC = () => {
-  return (
-    <section className="experience">
-      <h2 className="header border-bottom">Experience</h2>
-      {jobs.map((job) => (
-        <Job {...job} />
-      ))}
-    </section>
-  );
-};
+const Experience: React.FC = () => (
+  <section className="experience">
+    <h2 className="header border-bottom">Experience</h2>
+    {jobs.map((job) => (
+      <Job {...job} />
+    ))}
+  </section>
+);
 
 export default Experience;

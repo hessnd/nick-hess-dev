@@ -15,8 +15,8 @@ const Job: React.FC<Props> = ({
   title,
   startMonth,
   startYear,
-  endMonth,
-  endYear,
+  endMonth = 12,
+  endYear = 2021,
   isCurrent = false,
 }) => (
   <div className="job">
