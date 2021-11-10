@@ -5,8 +5,14 @@ import Slider from '../components/Slider';
 import Profile from '../components/Profile';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
+import { getEmployers } from '../lib/api';
 
-const IndexPage: React.FC = () => (
+type Props = {
+  preview?: boolean;
+  allEmployers: [];
+};
+
+const IndexPage: React.FC<Props> = ({ allEmployers }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -58,6 +64,11 @@ const IndexPage: React.FC = () => (
     <body>
       <main className="main">
         <Slider />
+        <ul>
+          {allEmployers.map((emp: any, idx: number) => (
+            <li key={idx}>{emp?.name}</li>
+          ))}
+        </ul>
         <Contact />
         <Profile />
         <Experience />
@@ -66,5 +77,12 @@ const IndexPage: React.FC = () => (
     </body>
   </>
 );
+
+export async function getStaticProps({ preview = true }) {
+  const allEmployers = (await getEmployers(preview)) ?? [];
+  return {
+    props: { preview, allEmployers },
+  };
+}
 
 export default IndexPage;
