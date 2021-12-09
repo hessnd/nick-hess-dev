@@ -9,7 +9,7 @@ import Skills from '../components/Skills';
 import { getEmployers } from '../lib/api';
 
 type Props = {
-  allEmployers: [];
+  allEmployers: { name: string }[];
 };
 
 const IndexPage: React.FC<Props> = ({ allEmployers }) => (
@@ -65,8 +65,8 @@ const IndexPage: React.FC<Props> = ({ allEmployers }) => (
       <main className="main">
         <Slider />
         <ul>
-          {allEmployers.map((emp: any, idx: number) => (
-            <li key={idx}>{emp?.name}</li>
+          {allEmployers.map((emp) => (
+            <li key={emp.name}>{emp.name}</li>
           ))}
         </ul>
         <Contact />

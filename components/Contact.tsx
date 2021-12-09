@@ -38,38 +38,36 @@ const Contact: React.FC = () => (
     <span className="location header">Living in Denver, CO</span>
     <style jsx>
       {`
-        $slate: #393f42;
-
         .contact {
           margin-top: 20px;
+        }
 
-          > h1 {
-            border-bottom: solid $slate 4px;
-            transition: border-bottom 0.2s ease;
-          }
+        .contact > h1 {
+          border-bottom: solid #393f42 4px;
+          transition: border-bottom 0.2s ease;
+        }
 
-          .location {
-            display: block;
-          }
+        .location {
+          display: block;
+        }
 
-          a,
-          .location {
-            color: inherit;
-            text-decoration: none;
-            font-size: 4vw;
-            font-weight: 100;
-            font-variation-settings: 'opsz' 30;
-            transition: font-weight 0.2s ease-in;
-          }
+        a,
+        .location {
+          color: inherit;
+          text-decoration: none;
+          font-size: 4vw;
+          font-weight: 100;
+          font-variation-settings: 'opsz' 30;
+          transition: font-weight 0.2s ease-in;
+        }
 
-          & > .socials {
-            display: flex;
-            align-items: center;
-          }
+        .contact > .socials {
+          display: flex;
+          align-items: center;
+        }
 
-          .bull {
-            padding: 0 5px;
-          }
+        .bull {
+          padding: 0 5px;
         }
       `}
     </style>

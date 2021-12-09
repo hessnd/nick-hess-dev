@@ -5,9 +5,9 @@ type Props = {
   title: string;
   startMonth: number;
   startYear: number;
-  endMonth?: number;
-  endYear?: number;
-  isCurrent?: boolean;
+  endMonth: number;
+  endYear: number;
+  isCurrent: boolean;
 };
 
 const Job: React.FC<Props> = ({
@@ -24,7 +24,7 @@ const Job: React.FC<Props> = ({
     <div className="positions">
       <h4>
         {`${title}: ${startMonth} ${startYear}`}
-        {'->'}
+        {' -> '}
         {isCurrent ? 'Current' : `${endMonth} ${endYear}`}
       </h4>
     </div>
@@ -33,11 +33,9 @@ const Job: React.FC<Props> = ({
         .company {
           margin-bottom: 15px;
         }
-        .positions {
-          h4 {
-            margin-top: 5px;
-            margin-bottom: 0;
-          }
+        .positions h4 {
+          margin-top: 5px;
+          margin-bottom: 0;
         }
       `}
     </style>

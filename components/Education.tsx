@@ -12,14 +12,12 @@ const Education: React.FC = () => (
     </ul>
     <style jsx>
       {`
-        .education {
-          > h3 {
-            margin-bottom: 5px;
-          }
+        h3 {
+          margin-bottom: 5px;
+        }
 
-          > ul {
-            margin-top: 0;
-          }
+        ul {
+          margin-top: 0;
         }
       `}
     </style>
