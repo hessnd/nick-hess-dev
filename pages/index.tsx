@@ -5,6 +5,7 @@ import Slider from '../components/Slider';
 import Profile from '../components/Profile';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
+import Skills from '../components/Skills';
 
 const IndexPage: React.FC = () => (
   <>
@@ -62,6 +63,7 @@ const IndexPage: React.FC = () => (
         <Profile />
         <Experience />
         <Education />
+        <Skills />
       </main>
     </body>
   </>
