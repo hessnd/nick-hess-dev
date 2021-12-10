@@ -1,17 +1,16 @@
-const CONTENTFUL_SPACE_ID = process.env.CONTENTFUL_SPACE_ID || '';
-const CONTENTFUL_PREVIEW_ACCESS_TOKEN =
-  process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN || '';
-const CONTENTFUL_ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN || '';
+const RESUME_ENTRY_ID = '5UQDTfyesype3RiMfW2Ofh';
 
 async function fetchGraphQL(query: string, preview = false) {
   return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`,
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${
-          preview ? CONTENTFUL_PREVIEW_ACCESS_TOKEN : CONTENTFUL_ACCESS_TOKEN
+          preview
+            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+            : process.env.CONTENTFUL_ACCESS_TOKEN
         }`,
       },
       body: JSON.stringify({ query }),
@@ -19,15 +18,33 @@ async function fetchGraphQL(query: string, preview = false) {
   ).then((response) => response.json());
 }
 
-function extractEmployerEntries(fetchResponse: any) {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  return fetchResponse?.data?.jobCollection?.items;
+export async function getResume(preview: boolean) {
+  try {
+    const entries = await fetchGraphQL(
+      `query {
+        resume(id: ${RESUME_ENTRY_ID}, preview: ${preview ? 'true' : 'false'}) {
+          name
+          profile
+          experienceCollection {
+            items {
+              ... on Job {
+                name
+              }
+            }
+          }
+        }
+      }`,
+      preview
+    );
+    return entries?.data?.resume;
+  } catch (error) {
+    throw new Error('Could not fetch resume');
+  }
 }
 
-// eslint-disable-next-line import/prefer-default-export
 export async function getEmployers(preview: boolean) {
   try {
-    const entries: any = await fetchGraphQL(
+    const entries = await fetchGraphQL(
       `query {
         jobCollection(preview: ${preview ? 'true' : 'false'}) {
           items {
@@ -37,8 +54,8 @@ export async function getEmployers(preview: boolean) {
       }`,
       preview
     );
-    return extractEmployerEntries(entries);
+    return entries?.data?.jobCollection?.items;
   } catch (error) {
-    throw new Error('Could not fetch');
+    throw new Error('Could not fetch Employers');
   }
 }
