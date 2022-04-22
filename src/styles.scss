@@ -35,6 +35,10 @@ body {
     background: $slate;
     color: $whitesmoke;
   }
+  .body,
+  li {
+    color: $whitesmoke;
+  }
 }
 
 h1 {
