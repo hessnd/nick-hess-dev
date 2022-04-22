@@ -1,88 +1,39 @@
 import React from 'react';
-import Head from 'next/head';
+import type { NextPage } from 'next';
+import Head from '../components/Head';
 import Contact from '../components/Contact';
 import Slider from '../components/Slider';
 import Profile from '../components/Profile';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
-import { getEmployers } from '../lib/api';
+import { getResume } from '../lib/api';
+import { Resume } from '../typings';
 
 type Props = {
-  allEmployers: { name: string }[];
+  resume: Resume;
 };
 
-const IndexPage: React.FC<Props> = ({ allEmployers }) => (
-  <>
-    <Head>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <title>Nick Hess</title>
-      <meta name="description" content="Nick Hess Resume" />
-      {/* <-- Global site tag (gtag.js) - Google Analytics --> */}
-      {/* <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-137790663-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-137790663-1');
-    </script> */}
-      <link
-        rel="icon"
-        type="image/png"
-        href="/favicon-32x32.png"
-        sizes="32x32"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        href="/favicon-16x16.png"
-        sizes="16x16"
-      />
-      {/* Facebook */}
-      <meta property="og:url" content="https://nickhess.dev" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Nick Hess" />
-      <meta property="og:image" content="" />
-      <meta property="og:description" content="my resume site" />
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@nickdhess" />
-      <meta name="twitter:creator" content="@nickdhess" />
-      <meta name="twitter:url" content="https://nickhess.dev" />
-      <meta name="twitter:title" content="Nick Hess" />
-      <meta name="twitter:description" content="my resume site" />
-      <meta name="twitter:image" content="" />
-    </Head>
-    <body>
+const IndexPage: NextPage<Props> = ({ resume }) => {
+  return (
+    <>
+      <Head />
       <main className="main">
         <Slider />
-        <ul>
-          {allEmployers.map((emp) => (
-            <li key={emp.name}>{emp.name}</li>
-          ))}
-        </ul>
         <Contact />
-        <Profile />
-        <Experience />
+        <Profile profile={resume.profile} />
+        <Experience experience={resume.experienceCollection.items} />
         <Education />
         <Skills />
       </main>
-    </body>
-  </>
-);
+    </>
+  );
+};
 
 export async function getStaticProps({ preview = true }) {
-  const allEmployers = (await getEmployers(preview)) ?? [];
+  const resume = (await getResume(preview)) ?? {};
   return {
-    props: { preview, allEmployers },
+    props: { preview, resume },
   };
 }
 

@@ -1,41 +1,16 @@
 import React from 'react';
 import Job from './Job';
+import { Job as JobType } from '../typings';
 
-const jobs = [
-  {
-    name: 'Peloton Interactive',
-    title: 'Software Engineer',
-    isCurrent: true,
-    startMonth: 5,
-    startYear: 2020,
-    endMonth: 0,
-    endYear: 0,
-  },
-  {
-    name: 'LoftSmart',
-    title: 'Full Stack Engineer',
-    isCurrent: false,
-    startMonth: 4,
-    startYear: 2019,
-    endMonth: 3,
-    endYear: 2020,
-  },
-  {
-    name: 'Big Spaceship',
-    title: 'Senior Technologist',
-    isCurrent: false,
-    startMonth: 7,
-    startYear: 2015,
-    endMonth: 4,
-    endYear: 2019,
-  },
-];
+type Props = {
+  experience: JobType[];
+};
 
-const Experience: React.FC = () => (
+const Experience: React.FC<Props> = ({ experience }) => (
   <section className="experience">
     <h2 className="header border-bottom">Experience</h2>
-    {jobs.map((job) => (
-      <Job key={job.name} {...job} />
+    {experience.map((job) => (
+      <Job key={job.name} job={job} />
     ))}
   </section>
 );

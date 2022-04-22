@@ -1,31 +1,20 @@
 import React from 'react';
+import { Job } from '../typings';
 
 type Props = {
-  name: string;
-  title: string;
-  startMonth: number;
-  startYear: number;
-  endMonth: number;
-  endYear: number;
-  isCurrent: boolean;
+  job: Job;
 };
 
 const Job: React.FC<Props> = ({
-  name,
-  title,
-  startMonth,
-  startYear,
-  endMonth = 12,
-  endYear = 2021,
-  isCurrent = false,
+  job: { name, title, startDate, endDate, currentPosition },
 }) => (
   <div className="job">
     <h3 className="header company">{name}</h3>
     <div className="positions">
       <h4>
-        {`${title}: ${startMonth} ${startYear}`}
+        {`${title}: ${startDate}`}
         {' -> '}
-        {isCurrent ? 'Current' : `${endMonth} ${endYear}`}
+        {currentPosition ? 'Current' : `${endDate}`}
       </h4>
     </div>
     <style jsx>
