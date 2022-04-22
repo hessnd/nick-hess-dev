@@ -1,8 +1,8 @@
 import React from 'react';
-import { Job } from '../typings';
+import { Job as JobType } from '../typings';
 
 type Props = {
-  job: Job;
+  job: JobType;
 };
 
 const Job: React.FC<Props> = ({
@@ -25,6 +25,7 @@ const Job: React.FC<Props> = ({
         .positions h4 {
           margin-top: 5px;
           margin-bottom: 0;
+          letter-spacing: 1.2px;
         }
       `}
     </style>

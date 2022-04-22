@@ -31,6 +31,7 @@ export async function getResume(preview: boolean) {
             items {
               ... on Job {
                 name
+                title
                 startDate
                 endDate
                 currentPosition
@@ -44,7 +45,7 @@ export async function getResume(preview: boolean) {
       }`,
       preview
     );
-    return entries?.data?.resume;
+    return entries.data.resume;
   } catch (error) {
     throw new Error('Could not fetch resume');
   }

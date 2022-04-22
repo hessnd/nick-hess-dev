@@ -4,12 +4,8 @@ const Slider: React.FC = () => {
   const [isDark, setDark] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const safariColorScheme = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      );
-      setDark(safariColorScheme.matches);
-    }
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    setDark(prefersDark.matches);
   }, []);
 
   const handleChange = () => {

@@ -31,7 +31,7 @@ const IndexPage: NextPage<Props> = ({ resume }) => {
 };
 
 export async function getStaticProps({ preview = true }) {
-  const resume = (await getResume(preview)) ?? {};
+  const resume = await getResume(preview);
   return {
     props: { preview, resume },
   };
