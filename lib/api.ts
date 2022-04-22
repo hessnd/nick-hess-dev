@@ -44,27 +44,8 @@ export async function getResume(preview: boolean) {
       }`,
       preview
     );
-    console.log('entries', entries);
     return entries?.data?.resume;
   } catch (error) {
     throw new Error('Could not fetch resume');
-  }
-}
-
-export async function getEmployers(preview: boolean) {
-  try {
-    const entries = await fetchGraphQL(
-      `query {
-        jobCollection(preview: ${preview ? 'true' : 'false'}) {
-          items {
-            name
-          }
-        }
-      }`,
-      preview
-    );
-    return entries?.data?.jobCollection?.items;
-  } catch (error) {
-    throw new Error('Could not fetch Employers');
   }
 }
