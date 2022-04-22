@@ -24,7 +24,7 @@ const IndexPage: NextPage<Props> = ({ resume }) => {
         <Profile profile={resume.profile} />
         <Experience experience={resume.experienceCollection.items} />
         <Education />
-        <Skills />
+        <Skills skills={resume.skills.name} />
       </main>
     </>
   );

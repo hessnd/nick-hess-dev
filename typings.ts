@@ -4,6 +4,7 @@ export type Job = {
   startDate: string;
   endDate?: string;
   currentPosition: boolean;
+  details: string;
 };
 
 export type Resume = {

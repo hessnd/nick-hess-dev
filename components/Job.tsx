@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import type { Job as JobType } from '../typings';
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
 };
 
 const Job: React.FC<Props> = ({
-  job: { name, title, startDate, endDate, currentPosition },
+  job: { name, title, startDate, endDate, currentPosition, details },
 }) => (
   <div className="job">
     <h3 className="header company">{name}</h3>
@@ -17,6 +18,7 @@ const Job: React.FC<Props> = ({
         {currentPosition ? 'Current' : `${endDate}`}
       </h4>
     </div>
+    <ReactMarkdown>{details}</ReactMarkdown>
     <style jsx>
       {`
         .company {

@@ -35,6 +35,7 @@ export async function getResume(preview: boolean) {
                 startDate
                 endDate
                 currentPosition
+                details
               }
             }
           }
