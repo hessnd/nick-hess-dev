@@ -1,5 +1,5 @@
 import React from 'react';
-import { Job as JobType } from '../typings';
+import type { Job as JobType } from '../typings';
 
 type Props = {
   job: JobType;

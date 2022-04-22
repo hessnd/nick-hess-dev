@@ -1,6 +1,6 @@
 import React from 'react';
 import Job from './Job';
-import { Job as JobType } from '../typings';
+import type { Job as JobType } from '../typings';
 
 type Props = {
   experience: JobType[];

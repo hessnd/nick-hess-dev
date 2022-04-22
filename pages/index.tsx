@@ -8,7 +8,7 @@ import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
 import { getResume } from '../lib/api';
-import { Resume } from '../typings';
+import type { Resume } from '../typings';
 
 type Props = {
   resume: Resume;
