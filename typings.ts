@@ -1,9 +1,5 @@
 export type Job = {
   name: string;
-  title: string;
-  startDate: string;
-  endDate?: string;
-  currentPosition: boolean;
   details: string;
   jobTitlesCollection: {
     items: JobTitles[];

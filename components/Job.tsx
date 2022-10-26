@@ -7,20 +7,12 @@ type Props = {
 };
 
 const Job: React.FC<Props> = ({
-  job: {
-    name,
-    title,
-    startDate,
-    endDate,
-    currentPosition,
-    details,
-    jobTitlesCollection,
-  },
+  job: { name, details, jobTitlesCollection },
 }) => (
   <div className="job">
     <h3 className="header company">{name}</h3>
     <div className="positions">
-      {jobTitlesCollection.items.map((item: JobType, idx: number) => (
+      {jobTitlesCollection.items.map((item, idx) => (
         <h4 key={idx}>
           {`${item.title}: ${item.startDate}`}
           {' -> '}
