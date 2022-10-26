@@ -5,6 +5,16 @@ export type Job = {
   endDate?: string;
   currentPosition: boolean;
   details: string;
+  jobTitlesCollection: {
+    items: JobTitles[];
+  };
+};
+
+export type JobTitles = {
+  title: string;
+  startDate: string;
+  endDate?: string;
+  currentPosition: boolean;
 };
 
 export type Resume = {

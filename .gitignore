@@ -8,7 +8,7 @@ node_modules
 /out/
 
 # production
-dist
+dist/
 /build
 
 # misc

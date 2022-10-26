@@ -36,6 +36,16 @@ export async function getResume(preview: boolean) {
                 endDate
                 currentPosition
                 details
+                jobTitlesCollection {
+                  items {
+                    ... on JobTitle {
+                      title
+                      startDate
+                      endDate
+                      currentPosition
+                    }
+                  }
+                }
               }
             }
           }

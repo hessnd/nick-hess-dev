@@ -2,8 +2,6 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from '../components/Head';
 import Contact from '../components/Contact';
-import Slider from '../components/Slider';
-import Profile from '../components/Profile';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
@@ -19,9 +17,7 @@ const IndexPage: NextPage<Props> = ({ resume }) => {
     <>
       <Head />
       <main className="main">
-        <Slider />
         <Contact />
-        <Profile profile={resume.profile} />
         <Experience experience={resume.experienceCollection.items} />
         <Education />
         <Skills skills={resume.skills.name} />
