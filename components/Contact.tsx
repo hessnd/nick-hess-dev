@@ -61,6 +61,13 @@ const Contact: React.FC = () => (
           transition: font-weight 0.2s ease-in;
         }
 
+        @media only screen and (min-width: 768px) {
+          a,
+          .location {
+            font-size: 30px;
+          }
+        }
+
         .contact > .socials {
           display: flex;
           align-items: center;
