@@ -30,6 +30,7 @@ const Job: React.FC<Props> = ({
           margin-top: 5px;
           margin-bottom: 0;
           letter-spacing: 1.2px;
+          font-weight: 200;
         }
         @media only screen and (min-width: 768px) {
           .details li {
