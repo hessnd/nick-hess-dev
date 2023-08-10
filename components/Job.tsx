@@ -20,7 +20,7 @@ const Job: React.FC<Props> = ({
         </h4>
       ))}
     </div>
-    <ReactMarkdown>{details}</ReactMarkdown>
+    <ReactMarkdown className="details">{details}</ReactMarkdown>
     <style jsx>
       {`
         .company {
@@ -30,6 +30,11 @@ const Job: React.FC<Props> = ({
           margin-top: 5px;
           margin-bottom: 0;
           letter-spacing: 1.2px;
+        }
+        @media only screen and (min-width: 768px) {
+          .details li {
+            font-size: 20px;
+          }
         }
       `}
     </style>
