@@ -24,6 +24,9 @@ const Head: React.FC = () => (
     <meta name="twitter:title" content="Nick Hess" />
     <meta name="twitter:description" content="my resume site" />
     <meta name="twitter:image" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   </NextHead>
 );
 

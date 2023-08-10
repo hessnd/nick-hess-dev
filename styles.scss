@@ -65,10 +65,14 @@ h3 {
   font-variation-settings: 'opsz' 80;
 }
 
+ul {
+  list-style-type: circle;
+}
+
 p,
 ul {
-  font-size: 4vw;
-  font-weight: 60;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.8vw;
   font-variation-settings: 'opsz' 30;
   color: black;
 }
@@ -93,7 +97,14 @@ a {
 /* Extra small devices (phones, 600px and down) */
 // @media only screen and (max-width: 600px) {...}
 /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 600px) {
+
+  p,
+  ul {
+    font-size: 18px;
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   main {
@@ -118,7 +129,7 @@ a {
 
   p,
   ul {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
