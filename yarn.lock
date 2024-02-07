@@ -2377,7 +2377,7 @@ micromark-core-commonmark@^1.0.0:
     micromark-util-types "^1.0.1"
     uvu "^0.5.0"
 
-micromark-core-commonmark@^1.0.1, micromark-core-commonmark@^1.0.6:
+micromark-core-commonmark@^1.0.1:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/micromark-core-commonmark/-/micromark-core-commonmark-1.0.6.tgz#edff4c72e5993d93724a3c206970f5a15b0585ad"
   integrity sha512-K+PkJTxqjFfSNkfAhp4GB+cZPfQd6dxtTXnf+RjZOV7T4EEXnvgzOcnp+eSTmpGk9d1S9sL6/lqrgSNn/s0HZA==

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const links = [
   {
     text: 'twitter',
@@ -20,12 +22,12 @@ export default function Contact() {
       <div className="flex items-center">
         <a href="mailto:nick@nickhess.dev">email</a>
         {links.map(({ text, href }) => (
-          <>
+          <React.Fragment key={href}>
             <span className="px-1">&bull;</span>
             <a href={href} target="_blank" rel="noopener noreferrer">
               {text}
             </a>
-          </>
+          </React.Fragment>
         ))}
       </div>
       <span className="block">Living in Denver, CO</span>
