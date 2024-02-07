@@ -1,4 +1,4 @@
-const links: { text: string; href: string }[] = [
+const links = [
   {
     text: 'twitter',
     href: 'https://twitter.com/nickdhess',
