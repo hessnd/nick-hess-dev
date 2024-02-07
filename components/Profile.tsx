@@ -5,9 +5,9 @@ type Props = {
 };
 
 const Profile = ({ profile }: Props) => (
-  <section className="profile">
-    <h2 className="header border-bottom">Profile</h2>
-    <p className="body">{profile}</p>
+  <section>
+    <h2>Profile</h2>
+    <p>{profile}</p>
   </section>
 );
 

@@ -7,10 +7,9 @@ type Props = {
 
 export default function Skills({ skills }: Props) {
   return (
-    <section className="skills">
-      <h2 className="header border-bottom">Skills</h2>
-      {/* @ts-ignore */}
+    <section>
+      <h2>Skills</h2>
       <MDXRemote source={skills} />
     </section>
   );
-};
+}

@@ -7,8 +7,8 @@ type Props = {
 };
 
 const Experience = ({ experience }: Props) => (
-  <section className="experience">
-    <h2 className="header border-bottom">Experience</h2>
+  <section>
+    <h2>Experience</h2>
     {experience.map((job) => (
       <Job key={job.name} job={job} />
     ))}

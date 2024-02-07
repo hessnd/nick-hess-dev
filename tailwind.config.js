@@ -6,10 +6,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      marvinVisionsSmallVariable: ['Marvin Visions Small Variable', 'sans-serif'],
+      marvin: ['Marvin Visions Small Variable', 'sans-serif'],
     },
     extend: {},
   },
   plugins: [],
-}
-
+};
