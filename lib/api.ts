@@ -7,23 +7,21 @@ async function fetchGraphQL(query: string, preview = false) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${
-          preview
+        Authorization: `Bearer ${preview
             ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
             : process.env.CONTENTFUL_ACCESS_TOKEN
-        }`,
+          }`,
       },
       body: JSON.stringify({ query }),
     }
   ).then((response) => response.json());
 }
 
-export async function getResume(preview: boolean) {
+export async function getResume(preview: boolean = false) {
   try {
     const entries = await fetchGraphQL(
       `query {
-        resume(id: "${RESUME_ENTRY_ID}", preview: ${
-        preview ? 'true' : 'false'
+        resume(id: "${RESUME_ENTRY_ID}", preview: ${preview ? 'true' : 'false'
       }) {
           name
           profile

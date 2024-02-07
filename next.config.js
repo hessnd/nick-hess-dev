@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * @type {import('next').Config}
+ * @type {import('next').NextConfig}
  */
 module.exports = {
   reactStrictMode: true,

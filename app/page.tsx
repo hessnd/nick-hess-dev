@@ -1,18 +1,14 @@
 import React from 'react';
-import type { NextPage } from 'next';
 import Head from '../components/Head';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
 import { getResume } from '../lib/api';
-import type { Resume } from '../typings';
 
-type Props = {
-  resume: Resume;
-};
+export default async function Page () {
+  const resume = await getResume();
 
-const IndexPage: NextPage<Props> = ({ resume }) => {
   return (
     <>
       <Head />
@@ -25,12 +21,3 @@ const IndexPage: NextPage<Props> = ({ resume }) => {
     </>
   );
 };
-
-export async function getStaticProps({ preview = true }) {
-  const resume = await getResume(preview);
-  return {
-    props: { preview, resume },
-  };
-}
-
-export default IndexPage;

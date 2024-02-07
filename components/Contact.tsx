@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 
 const Contact: React.FC = () => (
-  <section className="contact">
+  <section className="mt-4">
     <h1 className="header border-bottom">Nick Hess</h1>
     <div className="socials header">
       <a className="social-link" href="mailto:nick@nickhess.dev">

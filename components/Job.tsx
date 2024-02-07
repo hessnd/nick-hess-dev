@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import type { Job as JobType } from '../typings';
 
 type Props = {
@@ -10,8 +10,8 @@ const Job: React.FC<Props> = ({
   job: { name, details, jobTitlesCollection },
 }) => (
   <div className="job">
-    <h3 className="header company">{name}</h3>
-    <div className="positions">
+    <h3 className="header mb-3">{name}</h3>
+    <div className="positions mb-2">
       {jobTitlesCollection.items.map((item, idx) => (
         <h4 key={idx}>
           {`${item.title}: ${item.startDate}`}
@@ -20,25 +20,26 @@ const Job: React.FC<Props> = ({
         </h4>
       ))}
     </div>
-    <ReactMarkdown className="details">{details}</ReactMarkdown>
-    <style jsx>
-      {`
-        .company {
-          margin-bottom: 15px;
-        }
-        .positions h4 {
-          margin-top: 5px;
-          margin-bottom: 0;
-          letter-spacing: 1.2px;
-          font-weight: 200;
-        }
-        @media only screen and (min-width: 768px) {
-          .details li {
-            font-size: 20px;
-          }
-        }
-      `}
-    </style>
+    {/* @ts-ignore */}
+    <MDXRemote source={details} />
+    {/* <style jsx> */}
+    {/*   {` */}
+    {/*     .company { */}
+    {/*       margin-bottom: 15px; */}
+    {/*     } */}
+    {/*     .positions h4 { */}
+    {/*       margin-top: 5px; */}
+    {/*       margin-bottom: 0; */}
+    {/*       letter-spacing: 1.2px; */}
+    {/*       font-weight: 200; */}
+    {/*     } */}
+    {/*     @media only screen and (min-width: 768px) { */}
+    {/*       .details li { */}
+    {/*         font-size: 20px; */}
+    {/*       } */}
+    {/*     } */}
+    {/*   `} */}
+    {/* </style> */}
   </div>
 );
 
