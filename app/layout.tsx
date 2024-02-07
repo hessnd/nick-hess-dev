@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-// import { Analytics } from '@vercel/analytics/react';
+import Analytics from 'components/Analytics';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={montserrat.className}>
       <body>{children}</body>
-      {/* <Analytics /> */}
+      <Analytics />
     </html>
   );
 }
