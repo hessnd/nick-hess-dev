@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Contact: React.FC = () => (
+const Contact = () => (
   <section className="mt-4">
     <h1 className="header border-bottom">Nick Hess</h1>
     <div className="socials header">
@@ -40,10 +40,6 @@ const Contact: React.FC = () => (
     <span className="location header">Living in Denver, CO</span>
     <style jsx>
       {`
-        .contact {
-          margin-top: 20px;
-        }
-
         .contact > h1 {
           border-bottom: solid #393f42 4px;
           transition: border-bottom 0.2s ease;

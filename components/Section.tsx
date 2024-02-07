@@ -5,7 +5,7 @@ type Props = {
   title: string;
 };
 
-const Section: React.FC<Props> = ({ children, title = 'Title' }) => (
+const Section = ({ children, title = 'Title' }: Props) => (
   <section>
     <h2 className="header border-bottom">{title}</h2>
     <p className="body">{children}</p>

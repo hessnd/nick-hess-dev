@@ -6,40 +6,21 @@ type Props = {
   job: JobType;
 };
 
-const Job: React.FC<Props> = ({
-  job: { name, details, jobTitlesCollection },
-}) => (
+const Job = ({ job: { name, details, jobTitlesCollection } }: Props) => (
   <div className="job">
-    <h3 className="header mb-3">{name}</h3>
-    <div className="positions mb-2">
+    <h3 className="header mb-2">{name}</h3>
+    <div className="positions mb-5">
       {jobTitlesCollection.items.map((item, idx) => (
-        <h4 key={idx}>
+        <h4 key={idx} className="font-light mb-0 mt-1">
           {`${item.title}: ${item.startDate}`}
           {' -> '}
           {item.currentPosition ? 'Current' : `${item.endDate}`}
         </h4>
       ))}
     </div>
-    {/* @ts-ignore */}
-    <MDXRemote source={details} />
-    {/* <style jsx> */}
-    {/*   {` */}
-    {/*     .company { */}
-    {/*       margin-bottom: 15px; */}
-    {/*     } */}
-    {/*     .positions h4 { */}
-    {/*       margin-top: 5px; */}
-    {/*       margin-bottom: 0; */}
-    {/*       letter-spacing: 1.2px; */}
-    {/*       font-weight: 200; */}
-    {/*     } */}
-    {/*     @media only screen and (min-width: 768px) { */}
-    {/*       .details li { */}
-    {/*         font-size: 20px; */}
-    {/*       } */}
-    {/*     } */}
-    {/*   `} */}
-    {/* </style> */}
+    <div className="text-xl">
+      <MDXRemote source={details} />
+    </div>
   </div>
 );
 

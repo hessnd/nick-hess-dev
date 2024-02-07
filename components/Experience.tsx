@@ -6,7 +6,7 @@ type Props = {
   experience: JobType[];
 };
 
-const Experience: React.FC<Props> = ({ experience }) => (
+const Experience = ({ experience }: Props) => (
   <section className="experience">
     <h2 className="header border-bottom">Experience</h2>
     {experience.map((job) => (

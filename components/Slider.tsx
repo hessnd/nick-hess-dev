@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const Slider: React.FC = () => {
+const Slider = () => {
   const [isDark, setDark] = useState(false);
 
   useEffect(() => {

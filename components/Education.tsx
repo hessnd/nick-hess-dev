@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Education: React.FC = () => (
+const Education = () => (
   <section className="education">
     <h2 className="header border-bottom">Education</h2>
     <h3 className="header mt-1">Michigan State University</h3>
