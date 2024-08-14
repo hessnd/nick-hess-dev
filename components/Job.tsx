@@ -21,6 +21,7 @@ export default function Job({
         ))}
       </div>
       <div className="text-xl">
+        {/* @ts-ignore */}
         <MDXRemote source={details} />
       </div>
     </div>

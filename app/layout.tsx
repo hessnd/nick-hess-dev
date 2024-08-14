@@ -1,6 +1,6 @@
+import Analytics from 'components/Analytics';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-import Analytics from 'components/Analytics';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -28,7 +28,6 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Nick Hess',
       locale: 'en_US',
       type: 'website',
-      // images: [],
     },
     icons: {
       icon: [
@@ -42,7 +41,6 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'my resume site',
       site: '@nickdhess',
       creator: '@nickdhess',
-      // images: [],
     },
   };
 }

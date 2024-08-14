@@ -8,6 +8,7 @@ export default function Skills({ skills }: Props) {
   return (
     <section>
       <h2>Skills</h2>
+      {/* @ts-ignore */}
       <MDXRemote source={skills} />
     </section>
   );

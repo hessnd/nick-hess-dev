@@ -1,3 +1,5 @@
+import type { Resume } from 'typings';
+
 const RESUME_ENTRY_ID = '5UQDTfyesype3RiMfW2Ofh';
 
 async function fetchGraphQL(query: string, preview = false) {
@@ -24,7 +26,7 @@ async function fetchGraphQL(query: string, preview = false) {
   return json;
 }
 
-export async function getResume(preview: boolean = false) {
+export async function getResume(preview: boolean = false): Promise<Resume> {
   try {
     const entries = await fetchGraphQL(
       `query {
