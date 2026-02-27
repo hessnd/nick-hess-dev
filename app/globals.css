@@ -1,123 +1,97 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 @font-face {
-  font-family: 'Marvin Visions Small Variable';
-  font-display: block;
-  src: url('../public/fonts/MarvinVisionsSmall-Variable.woff2') format('woff2'),
-    url('../public/fonts/MarvinVisionsSmall-Variable.woff') format('woff'),
-    url('../public/fonts/MarvinVisionsSmall-Variable.ttf') format('truetype');
+  font-family: 'Marvin Visions';
+  font-display: swap;
+  src:
+    url('/fonts/MarvinVisionsSmall-Variable.woff2') format('woff2'),
+    url('/fonts/MarvinVisionsSmall-Variable.woff') format('woff'),
+    url('/fonts/MarvinVisionsSmall-Variable.ttf') format('truetype');
   font-weight: 20 170;
 }
 
-:root {
-  --slate: #393f42;
-  --whitesmoke: #f5f5f5;
+@theme {
+  --font-display: 'Marvin Visions', system-ui, sans-serif;
+
+  --color-surface: #faf9f7;
+  --color-surface-subtle: #f0eeeb;
+  --color-surface-overlay: #e8e5e1;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #5c5c5c;
+  --color-ink-faint: #8a8a8a;
+  --color-accent: #2563eb;
+  --color-accent-subtle: #dbeafe;
+  --color-border: #d4d0cb;
+  --color-border-faint: #e8e5e1;
+  --color-highlight: #fef3c7;
 }
 
-html,
-body {
-  height: 100%;
+/* ── Base ── */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--slate);
-  color: var(--whitesmoke);
-  font-family: 'Marvin Visions Small Variable';
-  padding: 0 30px;
-  box-sizing: border-box;
-  padding-top: 10px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background 0.2s ease, color 0.2s ease;
 }
 
-ul {
-  list-style-type: circle;
+::selection {
+  background-color: var(--color-accent);
+  color: white;
 }
 
-li {
-  margin-bottom: 12px;
-}
+/* ── Print ── */
 
-a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 4vw;
-  font-weight: 100;
-  font-variation-settings: 'opsz' 30;
-  transition: font-weight 0.2s ease-in;
-}
+@media print {
+  body {
+    background: white;
+    font-size: 11pt;
+  }
 
-h1 {
-  font-size: 12vw;
-  font-weight: 160;
-  font-variation-settings: 'opsz' 100;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 8vw;
-  font-weight: 140;
-  font-variation-settings: 'opsz' 100;
-  display: inline-block;
-  margin-bottom: 0;
-  border-bottom: solid var(--slate) 2px;
-}
-
-h3 {
-  font-size: 5vw;
-  font-weight: 120;
-  font-variation-settings: 'opsz' 80;
-}
-
-p,
-ul {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.8vw;
-  font-variation-settings: 'opsz' 30;
-  color: var(--whitesmoke);
-}
-
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {...}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  p,
-  ul {
-    font-size: 18px;
+  .no-print {
+    display: none !important;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  main {
-    width: 768px;
-  }
+/* ── Staggered entrance animation ── */
 
-  h1 {
-    font-size: 92px;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  h2 {
-    font-size: 62px;
-  }
+.animate-in {
+  animation: fade-up 0.5s ease-out both;
+}
 
-  h3 {
-    font-size: 38px;
-  }
-
-  a {
-    font-size: 32px;
-  }
-
-  p,
-  ul {
-    font-size: 20px;
-  }
+.delay-1 {
+  animation-delay: 0.05s;
+}
+.delay-2 {
+  animation-delay: 0.1s;
+}
+.delay-3 {
+  animation-delay: 0.18s;
+}
+.delay-4 {
+  animation-delay: 0.26s;
+}
+.delay-5 {
+  animation-delay: 0.34s;
+}
+.delay-6 {
+  animation-delay: 0.42s;
+}
+.delay-7 {
+  animation-delay: 0.5s;
 }

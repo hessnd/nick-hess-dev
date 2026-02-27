@@ -28,6 +28,9 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# session transcripts
+session-*.md
+
 # vercel
 .now
 .vercel

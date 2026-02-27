@@ -1,19 +1,24 @@
-import React from 'react';
-import Contact from 'components/Contact';
-import Experience from 'components/Experience';
-import Education from 'components/Education';
-import Skills from 'components/Skills';
-import { getResume } from 'lib/api';
+import Header from '@/components/Header';
+import Summary from '@/components/Summary';
+import Notable from '@/components/Notable';
+import Experience from '@/components/Experience';
+import Skills from '@/components/Skills';
+import Education from '@/components/Education';
 
-export default async function Page() {
-  const resume = await getResume();
-
+export default function Page() {
   return (
-    <main className="flex-[1_0_auto]">
-      <Contact />
-      <Experience experience={resume.experienceCollection.items} />
+    <main className="max-w-2xl mx-auto px-5 sm:px-8 py-12 sm:py-16 space-y-10">
+      <Header />
+      <Summary />
+      <Notable />
+      <Experience />
+      <Skills />
       <Education />
-      <Skills skills={resume.skills.name} />
+      <footer className="animate-in delay-7 pt-6 border-t border-border-faint">
+        <p className="text-xs text-ink-faint">
+          &copy; {new Date().getFullYear()} Nick Hess
+        </p>
+      </footer>
     </main>
   );
 }

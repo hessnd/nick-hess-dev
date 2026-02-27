@@ -1,46 +1,50 @@
-import Analytics from 'components/Analytics';
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 import './globals.css';
 
-const montserrat = Montserrat({
+const dmSans = DM_Sans({
   display: 'swap',
   subsets: ['latin'],
+  variable: '--font-body',
 });
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: 'Nick Hess — Staff Engineering Leader',
+  description:
+    'Staff Engineering Leader with 11 years of experience architecting large-scale web platforms. Currently leading web platform and e-commerce at Peloton.',
+  openGraph: {
+    title: 'Nick Hess — Staff Engineering Leader',
+    description:
+      'Staff Engineering Leader with 11 years of experience. Currently leading web platform and e-commerce at Peloton.',
+    url: 'https://nickhess.dev',
+    siteName: 'Nick Hess',
+    locale: 'en_US',
+    type: 'website',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Nick Hess — Staff Engineering Leader',
+    description:
+      'Staff Engineering Leader with 11 years of experience. Currently leading web platform and e-commerce at Peloton.',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={montserrat.className}>
-      <body>{children}</body>
+    <html lang="en" className={dmSans.variable}>
+      <body className="font-[family-name:var(--font-body)]">{children}</body>
       <Analytics />
     </html>
   );
-}
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Nick Hess',
-    description: 'Nick Hess Resume',
-    openGraph: {
-      title: 'Nick Hess',
-      description: 'my resume site',
-      url: 'https://nickhess.dev',
-      siteName: 'Nick Hess',
-      locale: 'en_US',
-      type: 'website',
-    },
-    icons: {
-      icon: [
-        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      ],
-    },
-    twitter: {
-      card: 'summary',
-      title: 'Nick Hess',
-      description: 'my resume site',
-      site: '@nickdhess',
-      creator: '@nickdhess',
-    },
-  };
 }
