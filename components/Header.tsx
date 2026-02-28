@@ -24,11 +24,7 @@ export default function Header() {
             {label}
           </a>
         ))}
-        <a
-          href="/nick-hess-resume.md"
-          download
-          className="inline-flex items-center gap-1.5 text-accent hover:underline underline-offset-4 transition-colors"
-        >
+        <span className="inline-flex items-center gap-1.5 text-accent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
@@ -46,7 +42,24 @@ export default function Header() {
             <line x1="12" y1="15" x2="12" y2="3" />
           </svg>
           Resume
-        </a>
+          <span className="text-ink-faint">(</span>
+          <a
+            href="/nick-hess-resume.md"
+            download
+            className="hover:underline underline-offset-4 transition-colors"
+          >
+            .md
+          </a>
+          <span className="text-ink-faint">/</span>
+          <a
+            href="/nick-hess-resume.txt"
+            download
+            className="hover:underline underline-offset-4 transition-colors"
+          >
+            .txt
+          </a>
+          <span className="text-ink-faint">)</span>
+        </span>
       </div>
     </header>
   );
