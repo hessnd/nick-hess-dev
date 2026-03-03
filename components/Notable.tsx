@@ -1,3 +1,6 @@
+'use client';
+
+import { track } from '@vercel/analytics';
 import { resume } from '@/lib/data';
 
 export default function Notable() {
@@ -19,6 +22,12 @@ export default function Notable() {
               href={notable.link}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                track('Link Clicked', {
+                  type: 'notable',
+                  label: notable.linkText,
+                })
+              }
               className="inline-block mt-2 text-sm font-medium text-accent hover:underline underline-offset-4"
             >
               {notable.linkText} &rarr;

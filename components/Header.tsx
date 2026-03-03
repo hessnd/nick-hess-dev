@@ -1,3 +1,6 @@
+'use client';
+
+import { track } from '@vercel/analytics';
 import { resume } from '@/lib/data';
 
 export default function Header() {
@@ -9,6 +12,7 @@ export default function Header() {
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm mt-4">
         <a
           href={`mailto:${resume.email}`}
+          onClick={() => track('Link Clicked', { type: 'email', label: resume.email })}
           className="text-accent hover:underline underline-offset-4 transition-colors"
         >
           {resume.email}
@@ -19,6 +23,7 @@ export default function Header() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track('Link Clicked', { type: 'social', label })}
             className="text-accent hover:underline underline-offset-4 transition-colors"
           >
             {label}
@@ -46,6 +51,7 @@ export default function Header() {
           <a
             href="/nick-hess-resume.md"
             download
+            onClick={() => track('Link Clicked', { type: 'download', label: 'Resume (.md)' })}
             className="hover:underline underline-offset-4 transition-colors"
           >
             .md
@@ -54,6 +60,7 @@ export default function Header() {
           <a
             href="/nick-hess-resume.txt"
             download
+            onClick={() => track('Link Clicked', { type: 'download', label: 'Resume (.txt)' })}
             className="hover:underline underline-offset-4 transition-colors"
           >
             .txt
