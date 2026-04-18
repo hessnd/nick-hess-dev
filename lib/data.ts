@@ -24,7 +24,7 @@ export const resume: {
     { label: 'LinkedIn', href: 'https://linkedin.com/in/hessnick' },
   ],
   summary:
-    'Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead an 8-person team at Peloton owning three surfaces: the web platform serving 70+ engineers org-wide, Peloton\u2019s MCP server powering the Peloton ChatGPT app, and every top-of-funnel e-commerce domain on onepeloton.com \u2014 used by millions of monthly visitors. Track record of expanding scope across organizational boundaries, setting technical direction, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.',
+    'Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead an 8-person team at Peloton whose work spans three surfaces: the web platform serving 70+ engineers org-wide, every top-of-funnel e-commerce domain on onepeloton.com \u2014 used by millions of monthly visitors \u2014 and contributions to Peloton\u2019s MCP server powering the Peloton ChatGPT app. Track record of expanding scope across organizational boundaries, setting technical direction, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.',
   experience: [
     {
       company: 'Peloton Interactive',
@@ -50,8 +50,7 @@ export const resume: {
       ],
       bullets: [
         [
-          'Lead a team of 8 engineers (grown from 4) owning three surfaces at Peloton: the web platform serving 70+ engineers org-wide, Peloton\u2019s MCP server powering the Peloton ChatGPT app, and every top-of-funnel e-commerce domain \u2014 used by millions of monthly visitors.',
-          'Built and own Peloton\u2019s MCP server, the backbone of the Peloton ChatGPT app \u2014 giving ChatGPT users a safe, typed interface into Peloton\u2019s systems and giving internal teams a reusable surface for new AI-powered features.',
+          'Lead a team of 8 engineers (grown from 4) whose work spans three surfaces at Peloton: the web platform serving 70+ engineers org-wide, every top-of-funnel e-commerce domain \u2014 used by millions of monthly visitors \u2014 and contributions to Peloton\u2019s MCP server powering the Peloton ChatGPT app.',
           'Cut deployment lead time by 50% by migrating 8 Next.js apps from Netlify to Vercel and building a custom CI/CD pipeline on GitHub Actions, the Vercel SDK, and Nx \u2014 now running across 55,000+ PRs in the monorepo.',
           'Broke up a monolithic React app into independently deployable Next.js microfrontends on Vercel\u2019s split architecture, giving product teams autonomous release trains and cutting average build time by 40%.',
           'Co-led the migration from a GraphQL monolith to a federated graph, letting teams evolve their schemas independently and driving schema-related production incidents to near zero.',
