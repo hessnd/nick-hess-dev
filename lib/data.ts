@@ -24,7 +24,7 @@ export const resume: {
     { label: 'LinkedIn', href: 'https://linkedin.com/in/hessnick' },
   ],
   summary:
-    'Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead an 8-person engineering team owning Peloton\u2019s consumer-facing e-commerce experience at onepeloton.com and the web platform infrastructure serving 70+ engineers. Track record of expanding scope from internal platform engineering into public-facing product systems, defining technical direction across organizational boundaries, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.',
+    'Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead an 8-person team at Peloton owning three surfaces: the web platform serving 70+ engineers org-wide, Peloton\u2019s MCP server powering the Peloton ChatGPT app, and every top-of-funnel e-commerce domain on onepeloton.com \u2014 used by millions of monthly visitors. Track record of expanding scope across organizational boundaries, setting technical direction, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.',
   experience: [
     {
       company: 'Peloton Interactive',
@@ -50,20 +50,22 @@ export const resume: {
       ],
       bullets: [
         [
-          'Expanded team from 4 to 8 engineers, taking dual ownership of Peloton\u2019s consumer e-commerce experience (millions of monthly users) and the web platform infrastructure serving 70+ engineers across the organization.',
-          'Cut deployment lead time by 50% by migrating 8 Next.js applications from Netlify to Vercel with custom orchestration, then building a full CI/CD pipeline (GitHub Actions, Vercel SDK, NX) used across ~55,000+ PRs in the monorepo.',
-          'Decomposed a monolithic React application into independently deployable Next.js microfrontends using Vercel\u2019s split architecture, unlocking autonomous team releases and faster build times.',
-          'Co-led migration from a GraphQL monolith to a federated architecture, eliminating schema-related production incidents and enabling safe, independent schema evolution across teams.',
-          'Drove monorepo health initiatives \u2014 circular dependency guardrails, barrel import rewriting, React 18.3 upgrade \u2014 reducing build coupling and unblocking the org-wide pnpm migration.',
+          'Lead a team of 8 engineers (grown from 4) owning three surfaces at Peloton: the web platform serving 70+ engineers org-wide, Peloton\u2019s MCP server powering the Peloton ChatGPT app, and every top-of-funnel e-commerce domain \u2014 used by millions of monthly visitors.',
+          'Built and own Peloton\u2019s MCP server, the backbone of the Peloton ChatGPT app \u2014 giving ChatGPT users a safe, typed interface into Peloton\u2019s systems and giving internal teams a reusable surface for new AI-powered features.',
+          'Cut deployment lead time by 50% by migrating 8 Next.js apps from Netlify to Vercel and building a custom CI/CD pipeline on GitHub Actions, the Vercel SDK, and Nx \u2014 now running across 55,000+ PRs in the monorepo.',
+          'Broke up a monolithic React app into independently deployable Next.js microfrontends on Vercel\u2019s split architecture, giving product teams autonomous release trains and cutting average build time by 40%.',
+          'Co-led the migration from a GraphQL monolith to a federated graph, letting teams evolve their schemas independently and driving schema-related production incidents to near zero.',
+          'Unblocked the org-wide pnpm migration by leading monorepo health work \u2014 circular-dependency guardrails, automated barrel-import rewrites, and the React 18.3 upgrade \u2014 cutting cross-package build coupling across the codebase.',
         ],
         [
-          'Reduced customer support ticket volume by 40% during peak seasons by building Self Service features for direct member order modifications.',
-          'Led incremental migration from a client-side-only React app to Next.js with SSR, improving Core Web Vitals and SEO \u2014 presented this work at Next.js Conf 2024.',
-          'Modernized the release process to align with DORA metrics, achieving 50%+ faster deployment lead time and 10% improvement in pipeline reliability.',
+          'Presented at Next.js Conf 2024 on incrementally migrating Peloton\u2019s consumer web from a client-rendered React SPA to Next.js with SSR, improving Core Web Vitals across the funnel and measurably lifting organic search traffic.',
+          'Cut peak-season customer support ticket volume by 40% by shipping self-serve order-modification flows that let members change their own orders without contacting support.',
+          'Rebuilt the release pipeline around DORA metrics: 50%+ faster deployment lead time and a 10% lift in pipeline reliability.',
         ],
         [
-          'Shipped core e-commerce features across Peloton\u2019s consumer web platform (React, TypeScript, GraphQL), contributing to the shared design system and component library used by all e-commerce teams.',
-          'Introduced ESLint configurations, automated testing patterns, and PR review workflows that became the org-wide standard for frontend code quality.',
+          'Shipped core storefront, PDP, and checkout features across Peloton\u2019s consumer web (React, TypeScript, GraphQL).',
+          'Contributed to the shared design system and component library adopted by every e-commerce team at Peloton.',
+          'Authored the ESLint configs, testing patterns, and PR review workflows that became the org-wide standard for frontend code quality.',
         ],
       ],
     },
@@ -146,6 +148,8 @@ export const resume: {
       'Edge computing',
       'Federated GraphQL',
       'REST APIs',
+      'MCP servers',
+      'LLM / AI integrations',
     ],
   },
   education: {
