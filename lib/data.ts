@@ -124,21 +124,30 @@ export const resume: {
   },
   skills: {
     Languages: ['TypeScript', 'JavaScript', 'Python', 'Kotlin'],
-    Frameworks: ['React', 'Next.js', 'GraphQL (Apollo, Federation)', 'Node.js'],
+    Frameworks: [
+      'React',
+      'React Server Components',
+      'Next.js',
+      'GraphQL (Apollo, Federation)',
+      'Node.js',
+    ],
     Infrastructure: [
       'Vercel',
+      'Vercel Edge',
       'AWS',
       'Google Cloud',
       'Cloudflare',
       'Docker',
       'Kubernetes',
     ],
-    'CI/CD & Tooling': [
+    'CI/CD & Observability': [
       'GitHub Actions',
-      'NX',
+      'Nx',
       'Turborepo',
-      'Datadog',
       'Vercel SDK',
+      'Datadog',
+      'OpenTelemetry',
+      'DORA metrics',
     ],
     Databases: ['PostgreSQL', 'MySQL', 'NoSQL (DynamoDB, Firestore)'],
     Architecture: [
@@ -147,8 +156,13 @@ export const resume: {
       'Edge computing',
       'Federated GraphQL',
       'REST APIs',
+    ],
+    'AI / LLM': [
       'MCP servers',
-      'LLM / AI integrations',
+      'LLM integrations',
+      'RAG',
+      'Agentic workflows',
+      'Prompt engineering',
     ],
   },
   education: {

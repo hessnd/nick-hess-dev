@@ -62,11 +62,12 @@ Staff Engineering Leader with 11 years of experience architecting and delivering
 ## Technical Skills
 
 **Languages:** TypeScript, JavaScript, Python, Kotlin
-**Frameworks:** React, Next.js, GraphQL (Apollo, Federation), Node.js
-**Infrastructure:** Vercel, AWS, Google Cloud, Cloudflare, Docker, Kubernetes
-**CI/CD & Tooling:** GitHub Actions, NX, Turborepo, Datadog, Vercel SDK
+**Frameworks:** React, React Server Components, Next.js, GraphQL (Apollo, Federation), Node.js
+**Infrastructure:** Vercel, Vercel Edge, AWS, Google Cloud, Cloudflare, Docker, Kubernetes
+**CI/CD & Observability:** GitHub Actions, Nx, Turborepo, Vercel SDK, Datadog, OpenTelemetry, DORA metrics
 **Databases:** PostgreSQL, MySQL, NoSQL (DynamoDB, Firestore)
-**Architecture:** Microfrontends, Monorepo management, Edge computing, Federated GraphQL, REST APIs, MCP servers, LLM / AI integrations
+**Architecture:** Microfrontends, Monorepo management, Edge computing, Federated GraphQL, REST APIs
+**AI / LLM:** MCP servers, LLM integrations, RAG, Agentic workflows, Prompt engineering
 
 ---
 
