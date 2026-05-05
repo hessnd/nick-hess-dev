@@ -44,6 +44,8 @@ export const metadata: Metadata = {
     description:
       'Staff Engineering Leader with 11 years of experience. Currently leading frontend platform and top-of-funnel web experiences at Peloton.',
     images: ['/og-image.jpg'],
+    creator: '@nickdhess',
+    site: '@nickdhess',
   },
 };
 

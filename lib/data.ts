@@ -22,6 +22,7 @@ export const resume: {
   links: [
     { label: 'GitHub', href: 'https://github.com/hessnd' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hessnd' },
+    { label: 'X', href: 'https://x.com/nickdhess' },
   ],
   summary:
     'Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead an 8-person team at Peloton whose work spans three surfaces: the web platform serving 70+ engineers org-wide, every top-of-funnel e-commerce domain on onepeloton.com \u2014 used by millions of monthly visitors \u2014 and contributions to Peloton\u2019s MCP server powering the Peloton ChatGPT app. Track record of expanding scope across organizational boundaries, setting technical direction, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.',
