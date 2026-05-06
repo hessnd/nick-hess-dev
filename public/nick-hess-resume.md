@@ -1,12 +1,14 @@
 # Nick Hess
 
-nick@nickhess.dev | [nickhess.dev](https://nickhess.dev) | [github.com/hessnd](https://github.com/hessnd) | [linkedin.com/in/hessnick](https://linkedin.com/in/hessnick)
+Denver, CO
+
+nick@nickhess.dev | [nickhess.dev](https://nickhess.dev) | [github.com/hessnd](https://github.com/hessnd) | [linkedin.com/in/hessnd](https://www.linkedin.com/in/hessnd) | [x.com/nickdhess](https://x.com/nickdhess)
 
 ---
 
 ## Summary
 
-Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead an 8-person team at Peloton whose work spans three surfaces: the web platform serving 70+ engineers org-wide, every top-of-funnel e-commerce domain on onepeloton.com -- used by millions of monthly visitors -- and contributions to Peloton's MCP server powering the Peloton ChatGPT app. Track record of expanding scope across organizational boundaries, setting technical direction, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.
+Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead two teams at Peloton -- eComm Discovery, driving every top-of-funnel surface across the e-commerce org, and Web Platform, the foundation powering Peloton's web experiences end-to-end -- alongside investments in AI dev tooling, including contributions to Peloton's internal MCP server fleet. Track record of expanding scope across organizational boundaries, setting technical direction, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.
 
 ---
 
@@ -16,7 +18,7 @@ Staff Engineering Leader with 11 years of experience architecting and delivering
 
 **Staff Tech Lead Manager, Discovery** | Jul 2024 -- Present
 
-- Lead a team of 8 engineers (grown from 4) whose work spans three surfaces at Peloton: the web platform serving 70+ engineers org-wide, every top-of-funnel e-commerce domain -- used by millions of monthly visitors -- and contributions to Peloton's MCP server powering the Peloton ChatGPT app.
+- Lead two teams at Peloton -- eComm Discovery, driving every top-of-funnel e-commerce surface, and Web Platform, the foundation powering Peloton's web experiences -- alongside investments in AI dev tooling, including contributions to Peloton's internal MCP server fleet.
 - Cut deployment lead time by 50% by migrating 8 Next.js apps from Netlify to Vercel and building a custom CI/CD pipeline on GitHub Actions, the Vercel SDK, and Nx -- now running across 55,000+ PRs in the monorepo.
 - Broke up a monolithic React app into independently deployable Next.js microfrontends on Vercel's split architecture, giving product teams autonomous release trains and cutting average build time by 40%.
 - Co-led the migration from a GraphQL monolith to a federated graph, letting teams evolve their schemas independently and driving schema-related production incidents to near zero.
@@ -25,11 +27,11 @@ Staff Engineering Leader with 11 years of experience architecting and delivering
 **Senior Software Engineer** | Sep 2023 -- Jul 2024
 
 - Presented at Next.js Conf 2024 on incrementally migrating Peloton's consumer web from a client-rendered React SPA to Next.js with SSR, improving Core Web Vitals across the funnel and measurably lifting organic search traffic.
-- Cut peak-season customer support ticket volume by 40% by shipping self-serve order-modification flows that let members change their own orders without contacting support.
 - Rebuilt the release pipeline around DORA metrics: 50%+ faster deployment lead time and a 10% lift in pipeline reliability.
 
 **Software Engineer** | May 2020 -- Sep 2023
 
+- Cut peak-season customer support ticket volume by 40% by shipping self-serve order-modification flows on the Order Experience team, including the Order Cancellation MVP and delivery scheduling/rescheduling experiences.
 - Shipped core storefront, PDP, and checkout features across Peloton's consumer web (React, TypeScript, GraphQL).
 - Contributed to the shared design system and component library adopted by every e-commerce team at Peloton.
 - Authored the ESLint configs, testing patterns, and PR review workflows that became the org-wide standard for frontend code quality.
@@ -55,7 +57,7 @@ Staff Engineering Leader with 11 years of experience architecting and delivering
 
 ## Notable Projects & Speaking
 
-**Next.js Conf 2024** -- Presented "Incrementally Migrating to Next.js from a Client-Side-Only App" to a global audience, detailing Peloton's multi-year migration strategy, performance gains, and architectural decisions. [Watch the talk](https://youtu.be/Z77fshyTF3w)
+**Next.js Conf 2024** -- Presented "The long and winding road: CSR to static export to SSG" to a global audience, detailing Peloton's multi-year migration strategy, performance gains, and architectural decisions. [Watch the talk](https://youtu.be/Z77fshyTF3w)
 
 ---
 

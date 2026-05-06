@@ -1,74 +1,124 @@
-# Nick Hess
+NICK HESS
+Denver, CO
+nick@nickhess.dev | nickhess.dev | github.com/hessnd | linkedin.com/in/hessnd | x.com/nickdhess
 
-nick@nickhess.dev | [nickhess.dev](https://nickhess.dev) | [github.com/hessnd](https://github.com/hessnd) | [linkedin.com/in/hessnick](https://linkedin.com/in/hessnick)
+================================================================================
 
----
+SUMMARY
 
-## Summary
+Staff Engineering Leader with 11 years of experience architecting and delivering
+large-scale web platforms. Lead two teams at Peloton -- eComm Discovery, driving
+every top-of-funnel surface across the e-commerce org, and Web Platform, the
+foundation powering Peloton's web experiences end-to-end -- alongside
+investments in AI dev tooling, including contributions to Peloton's internal
+MCP server fleet. Track record of expanding scope across organizational
+boundaries, setting technical direction, personally executing the
+highest-complexity initiatives, and measurably improving developer velocity and
+system reliability. Speaker at Next.js Conf 2024.
 
-Staff Engineering Leader with 11 years of experience architecting and delivering large-scale web platforms. Lead an 8-person engineering team owning Peloton's consumer-facing e-commerce experience at onepeloton.com and the web platform infrastructure serving 70+ engineers. Track record of expanding scope from internal platform engineering into public-facing product systems, defining technical direction across organizational boundaries, personally executing the highest-complexity initiatives, and measurably improving developer velocity and system reliability. Speaker at Next.js Conf 2024.
+================================================================================
 
----
+EXPERIENCE
 
-## Experience
+Peloton Interactive
+-------------------
 
-### Peloton Interactive
+Staff Tech Lead Manager, Discovery | Jul 2024 -- Present
 
-**Staff Tech Lead Manager, Discovery** | Jul 2024 -- Present
+  - Lead two teams at Peloton -- eComm Discovery, driving every top-of-funnel
+    e-commerce surface, and Web Platform, the foundation powering Peloton's
+    web experiences -- alongside investments in AI dev tooling, including
+    contributions to Peloton's internal MCP server fleet.
+  - Cut deployment lead time by 50% by migrating 8 Next.js apps from Netlify
+    to Vercel and building a custom CI/CD pipeline on GitHub Actions, the
+    Vercel SDK, and Nx -- now running across 55,000+ PRs in the monorepo.
+  - Broke up a monolithic React app into independently deployable Next.js
+    microfrontends on Vercel's split architecture, giving product teams
+    autonomous release trains and cutting average build time by 40%.
+  - Co-led the migration from a GraphQL monolith to a federated graph, letting
+    teams evolve their schemas independently and driving schema-related
+    production incidents to near zero.
+  - Unblocked the org-wide pnpm migration by leading monorepo health work --
+    circular-dependency guardrails, automated barrel-import rewrites, and the
+    React 18.3 upgrade -- cutting cross-package build coupling across the
+    codebase.
 
-- Expanded team from 4 to 8 engineers, taking dual ownership of Peloton's consumer e-commerce experience (millions of monthly users) and the web platform infrastructure serving 70+ engineers across the organization.
-- Cut deployment lead time by 50% by migrating 8 Next.js applications from Netlify to Vercel with custom orchestration, then building a full CI/CD pipeline (GitHub Actions, Vercel SDK, NX) used across ~55,000+ PRs in the monorepo.
-- Decomposed a monolithic React application into independently deployable Next.js microfrontends using Vercel's split architecture, unlocking autonomous team releases and faster build times.
-- Co-led migration from a GraphQL monolith to a federated architecture, eliminating schema-related production incidents and enabling safe, independent schema evolution across teams.
-- Drove monorepo health initiatives -- circular dependency guardrails, barrel import rewriting, React 18.3 upgrade -- reducing build coupling and unblocking the org-wide pnpm migration.
+Senior Software Engineer | Sep 2023 -- Jul 2024
 
-**Senior Software Engineer** | Sep 2023 -- Jul 2024
+  - Presented at Next.js Conf 2024 on incrementally migrating Peloton's
+    consumer web from a client-rendered React SPA to Next.js with SSR,
+    improving Core Web Vitals across the funnel and measurably lifting
+    organic search traffic.
+  - Rebuilt the release pipeline around DORA metrics: 50%+ faster deployment
+    lead time and a 10% lift in pipeline reliability.
 
-- Reduced customer support ticket volume by 40% during peak seasons by building Self Service features for direct member order modifications.
-- Led incremental migration from a client-side-only React app to Next.js with SSR, improving Core Web Vitals and SEO -- presented this work at Next.js Conf 2024.
-- Modernized the release process to align with DORA metrics, achieving 50%+ faster deployment lead time and 10% improvement in pipeline reliability.
+Software Engineer | May 2020 -- Sep 2023
 
-**Software Engineer** | May 2020 -- Sep 2023
+  - Cut peak-season customer support ticket volume by 40% by shipping
+    self-serve order-modification flows on the Order Experience team,
+    including the Order Cancellation MVP and delivery scheduling/rescheduling
+    experiences.
+  - Shipped core storefront, PDP, and checkout features across Peloton's
+    consumer web (React, TypeScript, GraphQL).
+  - Contributed to the shared design system and component library adopted by
+    every e-commerce team at Peloton.
+  - Authored the ESLint configs, testing patterns, and PR review workflows
+    that became the org-wide standard for frontend code quality.
 
-- Shipped core e-commerce features across Peloton's consumer web platform (React, TypeScript, GraphQL), contributing to the shared design system and component library used by all e-commerce teams.
-- Introduced ESLint configurations, automated testing patterns, and PR review workflows that became the org-wide standard for frontend code quality.
+LoftSmart
+---------
 
-### LoftSmart
+Full Stack Engineer | Apr 2019 -- Mar 2020
 
-**Full Stack Engineer** | Apr 2019 -- Mar 2020
+  - Refactored a legacy multi-page application to a React SPA, improving
+    time-to-interactive by 30%.
+  - Led TypeScript migration for the React frontend, reducing production bug
+    rate by 80%.
+  - Developed an interactive rental preference quiz driving 10% conversion
+    rate improvement across 5 university campuses.
 
-- Refactored a legacy multi-page application to a React SPA, improving time-to-interactive by 30%.
-- Led TypeScript migration for the React frontend, reducing production bug rate by 80%.
-- Developed an interactive rental preference quiz driving 10% conversion rate improvement across 5 university campuses.
+Big Spaceship
+-------------
 
-### Big Spaceship
+Senior Technologist | Feb 2019 -- Apr 2019
+Technologist       | Jan 2017 -- Feb 2019
+Junior Technologist | Jul 2015 -- Jan 2017
 
-**Senior Technologist** | Feb 2019 -- Apr 2019
-**Technologist** | Jan 2017 -- Feb 2019
-**Junior Technologist** | Jul 2015 -- Jan 2017
+  - Delivered bespoke web experiences for Starbucks, Compass, and other
+    premium clients, handling high-traffic launches and complex interactive
+    requirements.
+  - Established engineering standards including automated testing, CI
+    pipelines, and code quality tooling, improving project delivery
+    efficiency by 10%.
 
-- Delivered bespoke web experiences for Starbucks, Compass, and other premium clients, handling high-traffic launches and complex interactive requirements.
-- Established engineering standards including automated testing, CI pipelines, and code quality tooling, improving project delivery efficiency by 10%.
+================================================================================
 
----
+NOTABLE PROJECTS & SPEAKING
 
-## Notable Projects & Speaking
+Next.js Conf 2024 -- Presented "The long and winding road: CSR to static export
+to SSG" to a global audience, detailing Peloton's multi-year migration strategy,
+performance gains, and architectural decisions.
+Watch the talk: https://youtu.be/Z77fshyTF3w
 
-**Next.js Conf 2024** -- Presented "Incrementally Migrating to Next.js from a Client-Side-Only App" to a global audience, detailing Peloton's multi-year migration strategy, performance gains, and architectural decisions. [Watch the talk](https://youtu.be/Z77fshyTF3w)
+================================================================================
 
----
+TECHNICAL SKILLS
 
-## Technical Skills
+Languages:               TypeScript, JavaScript, Python, Kotlin
+Frameworks:              React, React Server Components, Next.js,
+                         GraphQL (Apollo, Federation), Node.js
+Infrastructure:          Vercel, Vercel Edge, AWS, Google Cloud, Cloudflare,
+                         Docker, Kubernetes
+CI/CD & Observability:   GitHub Actions, Nx, Turborepo, Vercel SDK, Datadog,
+                         OpenTelemetry, DORA metrics
+Databases:               PostgreSQL, MySQL, NoSQL (DynamoDB, Firestore)
+Architecture:            Microfrontends, Monorepo management, Edge computing,
+                         Federated GraphQL, REST APIs
+AI / LLM:                MCP servers, LLM integrations, RAG, Agentic workflows,
+                         Prompt engineering
 
-**Languages:** TypeScript, JavaScript, Python, Kotlin
-**Frameworks:** React, Next.js, GraphQL (Apollo, Federation), Node.js
-**Infrastructure:** Vercel, AWS, Google Cloud, Cloudflare, Docker, Kubernetes
-**CI/CD & Tooling:** GitHub Actions, NX, Turborepo, Datadog, Vercel SDK
-**Databases:** PostgreSQL, MySQL, NoSQL (DynamoDB, Firestore)
-**Architecture:** Microfrontends, Monorepo management, Edge computing, Federated GraphQL, REST APIs
+================================================================================
 
----
+EDUCATION
 
-## Education
-
-**Michigan State University** -- B.S. Media & Information, Interactive Media Design
+Michigan State University -- B.S. Media & Information, Interactive Media Design
