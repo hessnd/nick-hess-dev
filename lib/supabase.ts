@@ -14,12 +14,14 @@ let client: SupabaseClient | null = null;
 export function getSupabase(): SupabaseClient {
   if (client) return client;
 
-  const url = process.env.SUPABASE_URL;
+  // The Supabase Vercel connector injects the URL as SUPABASE_URL on some
+  // versions and NEXT_PUBLIC_SUPABASE_URL on others; accept either.
+  const url = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   if (!url || !serviceRoleKey) {
     throw new Error(
-      'Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables.'
+      'Missing Supabase URL (SUPABASE_URL / NEXT_PUBLIC_SUPABASE_URL) or SUPABASE_SERVICE_ROLE_KEY environment variables.'
     );
   }
 
