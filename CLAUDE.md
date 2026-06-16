@@ -29,6 +29,8 @@ Single-page personal resume site built with Next.js 16 (App Router), React 19, a
 
 **Deployment:** Vercel (project config in `.vercel/project.json`). Analytics via `@vercel/analytics`.
 
+**Song of the Day** (`/song`): The one piece of dynamic, database-backed content. A song is posted via `POST /api/song` (bearer-auth with `SONG_API_SECRET`) with an Apple Music link; the track id is parsed (`lib/appleMusic.ts`) and metadata resolved via the free iTunes Lookup API, then upserted into a Supabase Postgres table (`songs_of_the_day`, one row per day keyed on `date`). All DB access goes through a server-only service-role client (`lib/supabase.ts`, lazily created) via the query layer in `lib/songs.ts`. The page shows today's song (America/Denver), or a random past "throwback" when today is unset. A daily Vercel cron (`vercel.json` → `/api/song/backfill`, auth via `CRON_SECRET`) records null entries for past dates that never got a song. Rich OG/Twitter share tags are generated per-day in the page's `generateMetadata`. Requires env vars `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SONG_API_SECRET`, `CRON_SECRET` (see `.env.local.example`).
+
 ## Conventions
 
 - Single quotes (`.prettierrc`)

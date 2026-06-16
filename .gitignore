@@ -35,3 +35,6 @@ session-*.md
 .now
 .vercel
 .env*.local
+
+# TypeScript incremental build info
+*.tsbuildinfo
