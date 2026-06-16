@@ -78,6 +78,23 @@ export async function GET() {
     return NextResponse.json(resolved ?? { song: null });
   } catch (err) {
     console.error('Failed to resolve song', err);
-    return NextResponse.json({ error: 'Failed to resolve song' }, { status: 500 });
+    // TEMP DIAGNOSTIC: surface the cause and which env vars are present
+    // (booleans only — no secret values). Remove before merge.
+    return NextResponse.json(
+      {
+        error: 'Failed to resolve song',
+        detail: err instanceof Error ? err.message : String(err),
+        env: {
+          SUPABASE_URL: Boolean(process.env.SUPABASE_URL),
+          NEXT_PUBLIC_SUPABASE_URL: Boolean(
+            process.env.NEXT_PUBLIC_SUPABASE_URL
+          ),
+          SUPABASE_SERVICE_ROLE_KEY: Boolean(
+            process.env.SUPABASE_SERVICE_ROLE_KEY
+          ),
+        },
+      },
+      { status: 500 }
+    );
   }
 }
