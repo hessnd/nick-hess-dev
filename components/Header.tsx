@@ -29,6 +29,13 @@ export default function Header() {
             {label}
           </a>
         ))}
+        <a
+          href="/song"
+          onClick={() => track('Link Clicked', { type: 'internal', label: 'Song of the Day' })}
+          className="text-accent hover:underline underline-offset-4 transition-colors"
+        >
+          Song of the Day
+        </a>
         <span className="inline-flex items-center gap-1.5 text-accent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
