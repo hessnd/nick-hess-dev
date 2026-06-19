@@ -5,11 +5,13 @@ import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Education from '@/components/Education';
 import ThemeToggle from '@/components/ThemeToggle';
+import SongLink from '@/components/SongLink';
 
 export default function Page() {
   return (
     <main className="max-w-2xl mx-auto px-5 sm:px-8 py-12 sm:py-16 space-y-10 relative">
-      <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2">
+        <SongLink />
         <ThemeToggle />
       </div>
       <Header />
