@@ -41,4 +41,5 @@ session-*.md
 
 # local secrets / scratch files (never commit)
 keys.txt
+knotctf.txt
 *.ctf
