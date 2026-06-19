@@ -15,8 +15,10 @@
 set -euo pipefail
 
 # Where the secret lives in 1Password, and where it gets posted.
-OP_REF="${SONG_OP_REF:-op://Private/nickhess-dev SONG_API_SECRET/credential}"
-ENDPOINT="${SONG_ENDPOINT:-https://nickhess.dev/api/song}"
+OP_REF="${SONG_OP_REF:-op://Private/SONG_API_SECRET/credential}"
+# Canonical host: apex nickhess.dev 308-redirects to www, which drops the
+# auth header cross-host. Post straight to www. Override for previews.
+ENDPOINT="${SONG_ENDPOINT:-https://www.nickhess.dev/api/song}"
 
 url="${1:-}"
 date="${2:-}"

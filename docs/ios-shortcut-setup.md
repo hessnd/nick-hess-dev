@@ -11,8 +11,8 @@ posting, use [`scripts/post-song.sh`](../scripts/post-song.sh) instead.
 ## Prerequisites
 
 - `SONG_API_SECRET` is set in Vercel **production** and the site is redeployed.
-- You have the secret value handy (1Password item `nickhess-dev SONG_API_SECRET`).
-- The endpoint is live: `https://nickhess.dev/api/song`.
+- You have the secret value handy (1Password item `SONG_API_SECRET`).
+- The endpoint is live: `https://www.nickhess.dev/api/song`.
 
 ## Build the Shortcut
 
@@ -31,7 +31,7 @@ posting, use [`scripts/post-song.sh`](../scripts/post-song.sh) instead.
    | 5 | **Show Notification** | `✓ Posted: ` then insert the **Dictionary Value** variable. |
 
 4. **Configure action 3 (Get Contents of URL)** — tap **Show More** to expand:
-   - **URL:** `https://nickhess.dev/api/song`
+   - **URL:** `https://www.nickhess.dev/api/song`
    - **Method:** `POST`
    - **Headers** (Add new header twice):
      - `Authorization` → type `Bearer ` (trailing space), then insert the
