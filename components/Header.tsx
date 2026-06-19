@@ -49,6 +49,15 @@ export default function Header() {
           Resume
           <span className="text-ink-faint">(</span>
           <a
+            href="/nick-hess-resume.pdf"
+            download
+            onClick={() => track('Link Clicked', { type: 'download', label: 'Resume (.pdf)' })}
+            className="hover:underline underline-offset-4 transition-colors"
+          >
+            .pdf
+          </a>
+          <span className="text-ink-faint">/</span>
+          <a
             href="/nick-hess-resume.md"
             download
             onClick={() => track('Link Clicked', { type: 'download', label: 'Resume (.md)' })}
