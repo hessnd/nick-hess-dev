@@ -38,3 +38,7 @@ session-*.md
 
 # TypeScript incremental build info
 *.tsbuildinfo
+
+# local secrets / scratch files (never commit)
+keys.txt
+*.ctf
