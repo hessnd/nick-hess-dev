@@ -6,13 +6,15 @@ export default function SongLink() {
   return (
     <a
       href="/song"
+      aria-label="Song of the Day"
+      title="Song of the Day"
       onClick={() => track('Link Clicked', { type: 'internal', label: 'Song of the Day' })}
-      className="no-print inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1.5 text-xs font-medium text-white shadow-sm hover:opacity-90 transition-opacity"
+      className="no-print w-8 h-8 flex items-center justify-center rounded-md text-ink-muted hover:text-ink hover:bg-surface-subtle transition-colors"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="14"
-        height="14"
+        width="18"
+        height="18"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -25,7 +27,6 @@ export default function SongLink() {
         <circle cx="6" cy="18" r="3" />
         <circle cx="18" cy="16" r="3" />
       </svg>
-      Song of the Day
     </a>
   );
 }
